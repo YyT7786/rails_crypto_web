@@ -22,13 +22,58 @@ services:
       - POSTGRES_USER=${POSTGRES_USER}
       - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
       - RAILS_MASTER_KEY=${RAILS_MASTER_KEY}
+      - VIRTUAL_HOST=${VIRTUAL_HOST}
+      - VIRTUAL_PORT=${VIRTUAL_PORT}
+      - LETSENCRYPT_HOST=${LETSENCRYPT_HOST}
+      - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
     volumes:
       - app-storage:/rails/storage
     depends_on:
       - db
     ports:
       - "3000:3000"
+    expose:
+      - 3000
+  nginx-proxy:
+    image: "jwilder/nginx-proxy:latest"
+    container_name: "nginx-proxy"
+    volumes:
+        - "html:/usr/share/nginx/html"
+        - "dhparam:/etc/nginx/dhparam"
+        - "vhost:/etc/nginx/vhost.d"
+        - "certs:/etc/nginx/certs"
+        - "/run/docker.sock:/tmp/docker.sock:ro"
+    depends_on:
+        - rails-crypto-web
+    restart: "always"
+    ports:
+        - "80:80"
+        - "443:443"
+    environment:
+        - DEFAULT_HOST=${DEFAULT_HOST}
+  letsencrypt:
+    image: "nginxproxy/acme-companion:latest"
+    container_name: "letsencrypt-helper"
+    volumes:
+        - "acme:/etc/acme.sh"
+        - "html:/usr/share/nginx/html"
+        - "dhparam:/etc/nginx/dhparam"
+        - "vhost:/etc/nginx/vhost.d"
+        - "certs:/etc/nginx/certs"
+        - "/run/docker.sock:/var/run/docker.sock:ro"
+    environment:
+        - NGINX_PROXY_CONTAINER=${NGINX_PROXY_CONTAINER}
+        - LETSENCRYPT_EMAIL=${LETSENCRYPT_EMAIL}
+        - LETSENCRYPT_TEST=${LETSENCRYPT_TEST}
+    restart: "always"
+    depends_on:
+        - "nginx-proxy"
 
 volumes:
   postgres_data: {}
   app-storage: {}
+  acme: {}
+  html: {}
+  vhost: {}
+  dhparam: {}
+  certs: {}
