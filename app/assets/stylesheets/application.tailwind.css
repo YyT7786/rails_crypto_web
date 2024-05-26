@@ -17,3 +17,36 @@
     @apply flex items-center text-primary-500;
   }
 }
+
+.tw-container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 640px) {
+  .tw-container {
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 768px) {
+  .tw-container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .tw-container {
+    max-width: 992px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .tw-container {
+    max-width: 1300px;
+    width: 100%;
+  }
+}
