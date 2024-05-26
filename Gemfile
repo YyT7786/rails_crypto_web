@@ -26,6 +26,12 @@ gem "stimulus-rails"
 # Use Tailwind CSS [https://github.com/rails/tailwindcss-rails]
 gem "tailwindcss-rails"
 
+# Use SASS
+gem "sassc-rails"
+
+# Use Font Awesome
+gem "font-awesome-sass", "~> 6.5.2"
+
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
