@@ -29,6 +29,9 @@ Rails.application.configure do
   # Do not fall back to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
 
+  # It prevents sprockets of using sass mode and SassC gem (which based on deprecated LibSass library) in assets:precompile step (https://github.com/tailwindlabs/tailwindcss/discussions/6738)
+  config.assets.css_compressor = nil
+
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.asset_host = "http://assets.example.com"
 
