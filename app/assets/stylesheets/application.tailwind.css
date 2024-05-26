@@ -11,3 +11,9 @@
 }
 
 */
+
+@layer components {
+  .gecko-up {
+    @apply flex items-center text-primary-500;
+  }
+}
