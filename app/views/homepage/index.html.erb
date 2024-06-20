@@ -75,7 +75,7 @@
           Cryptocurrencies
         </div>
         <!-- Cryptocurrencies Popup -->
-        <div class="popup-items rounded-md shadow-lg bg-white origin-top-left mt-2 p-4 w-56 ring-2 ring-gray-200 z-[2000] 2lg:hidden">
+        <div class="popup-items rounded-md shadow-lg bg-white origin-top-left mt-2 p-4 w-56 ring-2 ring-gray-200 z-[2000] 2lg:hidden display-none">
           <a class="hover:bg-gray-100 hover:text-gray-900 flex text-sm font-semibold items-center text-gray-700 rounded-lg px-2 py-3">
             <i class="fa-ranking-star fa-solid fa-fw text-gray-400 mr-2"></i>
             By Market Cap
@@ -298,7 +298,7 @@
           <i class="fa-chevron-down fa-solid fas text-gray-900 ml-2"></i>
         </button>
         <!-- Market Cap Filter Popup -->
-        <div @click.away="open = false" x-show="open" class="filter-dropdown rounded-md shadow-lg bg-white origin-top-left mt-2 p-2 w-56 ring-2 ring-gray-200 z-[2000]">
+        <div @click.away="open = false" x-show="open" x-cloak class="filter-dropdown rounded-md shadow-lg bg-white origin-top-left mt-2 p-2 w-56 ring-2 ring-gray-200 z-[2000]">
           <div class="focus-within:ring-primary-500 ring-2 ring-gray-100 rounded-lg px-0.5 mt-0.5 mb-2">
             <input class="placeholder-gray-400 text-sm px-2 h-10 p-0 border-0 outline-0 bg-transparent">
           </div>
@@ -319,7 +319,7 @@
           <i class="fa-chevron-down fa-solid fas text-gray-900 ml-2"></i>
         </button>
         <!-- 24h Volume Filter Popup -->
-        <div @click.away="open = false" x-show="open" class="filter-dropdown rounded-md shadow-lg bg-white origin-top-left mt-2 p-2 w-56 ring-2 ring-gray-200 z-[2000]">
+        <div @click.away="open = false" x-show="open" x-cloak class="filter-dropdown rounded-md shadow-lg bg-white origin-top-left mt-2 p-2 w-56 ring-2 ring-gray-200 z-[2000]">
           <div class="focus-within:ring-primary-500 ring-2 ring-gray-100 rounded-lg px-0.5 mt-0.5 mb-2">
             <input class="placeholder-gray-400 text-sm px-2 h-10 p-0 border-0 outline-0 bg-transparent">
           </div>
@@ -340,7 +340,7 @@
           <i class="fa-chevron-down fa-solid fas text-gray-900 ml-2"></i>
         </button>
         <!-- 24h Change Filter Popup -->
-        <div @click.away="open = false" x-show="open" class="filter-dropdown rounded-md shadow-lg bg-white origin-top-left mt-2 p-2 w-56 ring-2 ring-gray-200 z-[2000]">
+        <div @click.away="open = false" x-show="open" x-cloak class="filter-dropdown rounded-md shadow-lg bg-white origin-top-left mt-2 p-2 w-56 ring-2 ring-gray-200 z-[2000]">
           <div class="focus-within:ring-primary-500 ring-2 ring-gray-100 rounded-lg px-0.5 mt-0.5 mb-2">
             <input class="placeholder-gray-400 text-sm px-2 h-10 p-0 border-0 outline-0 bg-transparent">
           </div>
@@ -361,7 +361,7 @@
           <i class="fa-chevron-down fa-solid fas text-gray-900 ml-2"></i>
         </button>
         <!-- Price Filter Popup -->
-        <div @click.away="open = false" x-show="open" class="filter-dropdown rounded-md shadow-lg bg-white origin-top-left mt-2 p-2 w-56 ring-2 ring-gray-200 z-[2000]">
+        <div @click.away="open = false" x-show="open" x-cloak class="filter-dropdown rounded-md shadow-lg bg-white origin-top-left mt-2 p-2 w-56 ring-2 ring-gray-200 z-[2000]">
           <div class="focus-within:ring-primary-500 ring-2 ring-gray-100 rounded-lg px-0.5 mt-0.5 mb-2">
             <input class="placeholder-gray-400 text-sm px-2 h-10 p-0 border-0 outline-0 bg-transparent">
           </div>
@@ -382,7 +382,7 @@
           <i class="fa-chevron-down fa-solid fas text-gray-900 ml-2"></i>
         </button>
         <!-- Category Filter Popup -->
-        <div @click.away="open = false" x-show="open" class="filter-dropdown rounded-md shadow-lg bg-white origin-top-left mt-2 p-2 w-56 ring-2 ring-gray-200 z-[2000]">
+        <div @click.away="open = false" x-show="open" x-cloak class="filter-dropdown rounded-md shadow-lg bg-white origin-top-left mt-2 p-2 w-56 ring-2 ring-gray-200 z-[2000]">
           <div class="focus-within:ring-primary-500 ring-2 ring-gray-100 rounded-lg px-0.5 mt-0.5 mb-2">
             <input class="placeholder-gray-400 text-sm px-2 h-10 p-0 border-0 outline-0 bg-transparent">
           </div>
@@ -403,7 +403,7 @@
           <i class="fa-chevron-down fa-solid fas text-gray-900 ml-2"></i>
         </button>
         <!-- Exchange Filter Popup -->
-        <div @click.away="open = false" x-show="open" class="filter-dropdown rounded-md shadow-lg bg-white origin-top-left mt-2 p-2 w-56 ring-2 ring-gray-200 z-[2000]">
+        <div @click.away="open = false" x-show="open" x-cloak class="filter-dropdown rounded-md shadow-lg bg-white origin-top-left mt-2 p-2 w-56 ring-2 ring-gray-200 z-[2000]">
           <div class="focus-within:ring-primary-500 ring-2 ring-gray-100 rounded-lg px-0.5 mt-0.5 mb-2">
             <input class="placeholder-gray-400 text-sm px-2 h-10 p-0 border-0 outline-0 bg-transparent">
           </div>
@@ -424,7 +424,7 @@
           <i class="fa-chevron-down fa-solid fas text-gray-900 ml-2"></i>
         </button>
         <!-- Platform Filter Popup -->
-        <div @click.away="open = false" x-show="open" class="filter-dropdown rounded-md shadow-lg bg-white origin-top-left mt-2 p-2 w-56 ring-2 ring-gray-200 z-[2000]">
+        <div @click.away="open = false" x-show="open" x-cloak class="filter-dropdown rounded-md shadow-lg bg-white origin-top-left mt-2 p-2 w-56 ring-2 ring-gray-200 z-[2000]">
           <div class="focus-within:ring-primary-500 ring-2 ring-gray-100 rounded-lg px-0.5 mt-0.5 mb-2">
             <input class="placeholder-gray-400 text-sm px-2 h-10 p-0 border-0 outline-0 bg-transparent">
           </div>
@@ -509,9 +509,7 @@
               <!-- Coin Name -->
               <td class="px-1 py-2.5">
                 <div class="flex items-center w-full">
-                  <a>
-                    <img class="mr-2 h-6 w-6 object-fill" src="<%= cryptocurrency.image_url %>">
-                  </a>
+                  <img class="mr-2 h-6 w-6 object-fill" src="<%= cryptocurrency.image_url %>">
                   <div class="flex flex-col 2lg:flex-row  items-start 2lg:items-center gap-x-1">
                     <div class="text-gray-700 font-semibold text-sm leading-5 ">
                       <%= cryptocurrency.name %>
