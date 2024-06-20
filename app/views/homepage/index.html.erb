@@ -277,6 +277,318 @@
 <!-- Advertisement -->
 <div class="tw-container h-[50px] md:h-[100px]">
 </div>
+<!-- Body Content Page -->
+<div class="tw-container mb-8">
+  <!-- All Cryptocurrencies -->
+  <div>
+    <h1 class="text-gray-900 text-sm leading-5 font-semibold md:font-bold md:text-2xl mb-1">
+      All Cryptocurrencies
+    </h1>
+    <div class="text-xs leading-4 text-gray-500 md:text-sm">
+      View a full list of active cryptocurrencies
+    </div>
+    <!-- All Cryptocurrencies Filter -->
+    <div class="flex flex-wrap gap-2 mt-4 md:mt-8">
+      <!-- Market Cap Filter -->
+      <div x-data="{open: false}" class="relative">
+        <button @click="open = !open" class="filter-dropdown-button flex text-sm items-center rounded-lg px-2.5 py-1.5 bg-gray-100 hover:bg-gray-300">
+          <div class="text-gray-900 font-semibold text-sm leading-5">
+            Market Cap
+          </div>
+          <i class="fa-chevron-down fa-solid fas text-gray-900 ml-2"></i>
+        </button>
+        <!-- Market Cap Filter Popup -->
+        <div @click.away="open = false" x-show="open" class="filter-dropdown rounded-md shadow-lg bg-white origin-top-left mt-2 p-2 w-56 ring-2 ring-gray-200 z-[2000]">
+          <div class="focus-within:ring-primary-500 ring-2 ring-gray-100 rounded-lg px-0.5 mt-0.5 mb-2">
+            <input class="placeholder-gray-400 text-sm px-2 h-10 p-0 border-0 outline-0 bg-transparent">
+          </div>
+          <div class="max-h-[320px] overflow-auto">
+            <div class="filter-dropdown-item flex justify-between text-gray-700 hover:bg-gray-100">
+              All
+              <i class="fa fa-check text-primary-500"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 24h Volume Filter -->
+      <div x-data="{open: false}" class="relative">
+        <button @click="open = !open" class="filter-dropdown-button flex text-sm items-center rounded-lg px-2.5 py-1.5 bg-gray-100 hover:bg-gray-300">
+          <div class="text-gray-900 font-semibold text-sm leading-5">
+            24h Volume
+          </div>
+          <i class="fa-chevron-down fa-solid fas text-gray-900 ml-2"></i>
+        </button>
+        <!-- 24h Volume Filter Popup -->
+        <div @click.away="open = false" x-show="open" class="filter-dropdown rounded-md shadow-lg bg-white origin-top-left mt-2 p-2 w-56 ring-2 ring-gray-200 z-[2000]">
+          <div class="focus-within:ring-primary-500 ring-2 ring-gray-100 rounded-lg px-0.5 mt-0.5 mb-2">
+            <input class="placeholder-gray-400 text-sm px-2 h-10 p-0 border-0 outline-0 bg-transparent">
+          </div>
+          <div class="max-h-[320px] overflow-auto">
+            <div class="filter-dropdown-item flex justify-between text-gray-700 hover:bg-gray-100">
+              All
+              <i class="fa fa-check text-primary-500"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 24h Change Filter -->
+      <div x-data="{open: false}" class="relative">
+        <button @click="open = !open" class="filter-dropdown-button flex text-sm items-center rounded-lg px-2.5 py-1.5 bg-gray-100 hover:bg-gray-300">
+          <div class="text-gray-900 font-semibold text-sm leading-5">
+            24h Change
+          </div>
+          <i class="fa-chevron-down fa-solid fas text-gray-900 ml-2"></i>
+        </button>
+        <!-- 24h Change Filter Popup -->
+        <div @click.away="open = false" x-show="open" class="filter-dropdown rounded-md shadow-lg bg-white origin-top-left mt-2 p-2 w-56 ring-2 ring-gray-200 z-[2000]">
+          <div class="focus-within:ring-primary-500 ring-2 ring-gray-100 rounded-lg px-0.5 mt-0.5 mb-2">
+            <input class="placeholder-gray-400 text-sm px-2 h-10 p-0 border-0 outline-0 bg-transparent">
+          </div>
+          <div class="max-h-[320px] overflow-auto">
+            <div class="filter-dropdown-item flex justify-between text-gray-700 hover:bg-gray-100">
+              All
+              <i class="fa fa-check text-primary-500"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Price Filter -->
+      <div x-data="{open: false}" class="relative">
+        <button @click="open = !open" class="filter-dropdown-button flex text-sm items-center rounded-lg px-2.5 py-1.5 bg-gray-100 hover:bg-gray-300">
+          <div class="text-gray-900 font-semibold text-sm leading-5">
+            Price
+          </div>
+          <i class="fa-chevron-down fa-solid fas text-gray-900 ml-2"></i>
+        </button>
+        <!-- Price Filter Popup -->
+        <div @click.away="open = false" x-show="open" class="filter-dropdown rounded-md shadow-lg bg-white origin-top-left mt-2 p-2 w-56 ring-2 ring-gray-200 z-[2000]">
+          <div class="focus-within:ring-primary-500 ring-2 ring-gray-100 rounded-lg px-0.5 mt-0.5 mb-2">
+            <input class="placeholder-gray-400 text-sm px-2 h-10 p-0 border-0 outline-0 bg-transparent">
+          </div>
+          <div class="max-h-[320px] overflow-auto">
+            <div class="filter-dropdown-item flex justify-between text-gray-700 hover:bg-gray-100">
+              All
+              <i class="fa fa-check text-primary-500"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Category Filter -->
+      <div x-data="{open: false}" class="relative">
+        <button @click="open = !open" class="filter-dropdown-button flex text-sm items-center rounded-lg px-2.5 py-1.5 bg-gray-100 hover:bg-gray-300">
+          <div class="text-gray-900 font-semibold text-sm leading-5">
+            Category
+          </div>
+          <i class="fa-chevron-down fa-solid fas text-gray-900 ml-2"></i>
+        </button>
+        <!-- Category Filter Popup -->
+        <div @click.away="open = false" x-show="open" class="filter-dropdown rounded-md shadow-lg bg-white origin-top-left mt-2 p-2 w-56 ring-2 ring-gray-200 z-[2000]">
+          <div class="focus-within:ring-primary-500 ring-2 ring-gray-100 rounded-lg px-0.5 mt-0.5 mb-2">
+            <input class="placeholder-gray-400 text-sm px-2 h-10 p-0 border-0 outline-0 bg-transparent">
+          </div>
+          <div class="max-h-[320px] overflow-auto">
+            <div class="filter-dropdown-item flex justify-between text-gray-700 hover:bg-gray-100">
+              All
+              <i class="fa fa-check text-primary-500"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Exchange Filter -->
+      <div x-data="{open: false}" class="relative">
+        <button @click="open = !open" class="filter-dropdown-button flex text-sm items-center rounded-lg px-2.5 py-1.5 bg-gray-100 hover:bg-gray-300">
+          <div class="text-gray-900 font-semibold text-sm leading-5">
+            Exchange
+          </div>
+          <i class="fa-chevron-down fa-solid fas text-gray-900 ml-2"></i>
+        </button>
+        <!-- Exchange Filter Popup -->
+        <div @click.away="open = false" x-show="open" class="filter-dropdown rounded-md shadow-lg bg-white origin-top-left mt-2 p-2 w-56 ring-2 ring-gray-200 z-[2000]">
+          <div class="focus-within:ring-primary-500 ring-2 ring-gray-100 rounded-lg px-0.5 mt-0.5 mb-2">
+            <input class="placeholder-gray-400 text-sm px-2 h-10 p-0 border-0 outline-0 bg-transparent">
+          </div>
+          <div class="max-h-[320px] overflow-auto">
+            <div class="filter-dropdown-item flex justify-between text-gray-700 hover:bg-gray-100">
+              All
+              <i class="fa fa-check text-primary-500"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Platform Filter -->
+      <div x-data="{open: false}" class="relative">
+        <button @click="open = !open" class="filter-dropdown-button flex text-sm items-center rounded-lg px-2.5 py-1.5 bg-gray-100 hover:bg-gray-300">
+          <div class="text-gray-900 font-semibold text-sm leading-5">
+            Platform
+          </div>
+          <i class="fa-chevron-down fa-solid fas text-gray-900 ml-2"></i>
+        </button>
+        <!-- Platform Filter Popup -->
+        <div @click.away="open = false" x-show="open" class="filter-dropdown rounded-md shadow-lg bg-white origin-top-left mt-2 p-2 w-56 ring-2 ring-gray-200 z-[2000]">
+          <div class="focus-within:ring-primary-500 ring-2 ring-gray-100 rounded-lg px-0.5 mt-0.5 mb-2">
+            <input class="placeholder-gray-400 text-sm px-2 h-10 p-0 border-0 outline-0 bg-transparent">
+          </div>
+          <div class="max-h-[320px] overflow-auto">
+            <div class="filter-dropdown-item flex justify-between text-gray-700 hover:bg-gray-100">
+              All
+              <i class="fa fa-check text-primary-500"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Separator -->
+      <div class="border-r border-gray-200 my-0.5">
+      </div>
+      <!-- Search & Reset -->
+      <div>
+        <button class="text-xs leading-4 mb-1 font-semibold bg-primary-500 text-white shadow-[0_4px_0_0] shadow-primary-700 border-primary-500 border-x-2 border-t-2 rounded-lg px-2.5 py-1.5 active:translate-y-2 active:shadow-[0_2px_0_0] active:shadow-primary-500 hover:bg-primary-600 hover:border-primary-600 duration-150 outline-none">
+          Search
+        </button>
+        <button class="text-xs leading-4 mb-1 font-semibold text-black shadow-[0_4px_0_0] shadow-slate-300 border-slate-300 border-x-2 border-t-2 rounded-lg px-2.5 py-1.5 active:translate-y-2 active:shadow-[0_2px_0_0] active:shadow-slate-300 hover:bg-slate-100 duration-150 outline-none">
+          Reset
+        </button>
+      </div>
+    </div>
+    <!-- <%= form_for @cryptocurrency do |f| %>
+        <%= f.text_field :name %>
+        <%= f.text_field :price %>
+        <%= f.submit %>
+      <% end %> -->
+    <!-- All Cryptocurrencies Table -->
+    <div class="mt-3 overflow-x-auto 2lg:overflow-x-visible 2lg:flex 2lg:justify-center">
+      <table class="border-y border-gray-200 divide-y divide-gray-200">
+        <thead>
+          <tr>
+            <th class="py-3 px-1 text-xs font-semibold text-gray-900 text-left left-[24px] md:min-w-[48px]">
+              #
+            </th>
+            <th class="py-3 px-1 text-xs font-semibold text-gray-900 text-left left-[51px] min-w-[122px] md:left-[72px] 2lg:min-w-[220px]">
+              Coin
+            </th>
+            <th class="py-3 px-1 text-xs font-semibold text-gray-900 text-right">
+              Price
+            </th>
+            <th class="py-3 px-1 text-xs font-semibold text-gray-900 text-right min-w-[70px]">
+              1h
+            </th>
+            <th class="py-3 px-1 text-xs font-semibold text-gray-900 text-right min-w-[70px]">
+              24h
+            </th>
+            <th class="py-3 px-1 text-xs font-semibold text-gray-900 text-right min-w-[70px]">
+              7d
+            </th>
+            <th class="py-3 px-1 text-xs font-semibold text-gray-900 text-right min-w-[70px]">
+              30d
+            </th>
+            <th class="py-3 px-1 text-xs font-semibold text-gray-900 text-right min-w-[150px]">
+              24h Volume
+            </th>
+            <th class="py-3 px-1 text-xs font-semibold text-gray-900 text-right min-w-[150px]">
+              Circulating Supply
+            </th>
+            <th class="py-3 px-1 text-xs font-semibold text-gray-900 text-right min-w-[150px]">
+              Total Supply            
+            </th>
+            <th class="py-3 px-1 text-xs font-semibold text-gray-900 text-right min-w-[160px]">
+              Market Cap
+            </th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+          <% @cryptocurrencies.each_with_index do |cryptocurrency, index|%>
+            <% percentage_state_class_1h = cryptocurrency.price_fluctuate_percentage_status ? 'text-green-500' : 'text-red-500' %>
+            <% percentage_state_class_24h = cryptocurrency.price_fluctuate_percentage_status ? 'text-green-500' : 'text-red-500' %>
+            <% percentage_state_class_7d = cryptocurrency.price_fluctuate_percentage_status ? 'text-green-500' : 'text-red-500' %>
+            <% percentage_state_class_30d = cryptocurrency.price_fluctuate_percentage_status ? 'text-green-500' : 'text-red-500' %>
+            <% coin_index = index + 1 %>
+            <tr class="text-sm bg-white hover:bg-gray-50">
+              <!-- Index -->
+              <td class="text-gray-900 px-1 py-2.5">
+                <%= coin_index %>
+              </td>
+              <!-- Coin Name -->
+              <td class="px-1 py-2.5">
+                <div class="flex items-center w-full">
+                  <a>
+                    <img class="mr-2 h-6 w-6 object-fill" src="<%= cryptocurrency.image_url %>">
+                  </a>
+                  <div class="flex flex-col 2lg:flex-row  items-start 2lg:items-center gap-x-1">
+                    <div class="text-gray-700 font-semibold text-sm leading-5 ">
+                      <%= cryptocurrency.name %>
+                      <div class="text-gray-500 text-xs leading-4 font-medium inline">
+                        <%= cryptocurrency.abbreviation %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </td>
+              <!-- Price -->
+              <td class="text-gray-900 px-1 py-2.5 text-end">
+                $<%= number_with_delimiter(cryptocurrency.price, delimiter: ",") %>
+              </td>
+              <!-- 1h -->
+              <td class="<%= percentage_state_class_1h %> px-1 py-2.5 text-end">
+                <% if cryptocurrency.price_fluctuate_percentage_status %>
+                  <i class="fa-solid fa-fw fa-caret-up"></i>
+                <% else %>
+                  <i class="fa-solid fa-fw fa-caret-down"></i>
+                <% end %>
+                <%= cryptocurrency.price_fluctuate_percentage %>
+              </td>
+              <!-- 24h -->
+              <td class="<%= percentage_state_class_24h %> px-1 py-2.5 text-end">
+                <% if cryptocurrency.price_fluctuate_percentage_status %>
+                  <i class="fa-solid fa-fw fa-caret-up"></i>
+                <% else %>
+                  <i class="fa-solid fa-fw fa-caret-down"></i>
+                <% end %>
+                <%= cryptocurrency.price_fluctuate_percentage %>
+              </td>
+              <!-- 7d -->
+              <td class="<%= percentage_state_class_7d %> px-1 py-2.5 text-end">
+                <% if cryptocurrency.price_fluctuate_percentage_status %>
+                  <i class="fa-solid fa-fw fa-caret-up"></i>
+                <% else %>
+                  <i class="fa-solid fa-fw fa-caret-down"></i>
+                <% end %>
+                <%= cryptocurrency.price_fluctuate_percentage %>
+              </td>
+              <!-- 30d -->
+              <td class="<%= percentage_state_class_30d %> px-1 py-2.5 text-end">
+                <% if cryptocurrency.price_fluctuate_percentage_status %>
+                  <i class="fa-solid fa-fw fa-caret-up"></i>
+                <% else %>
+                  <i class="fa-solid fa-fw fa-caret-down"></i>
+                <% end %>
+                <%= cryptocurrency.price_fluctuate_percentage %>
+              </td>
+              <!-- 24h Volume -->
+              <td class="text-gray-900 px-1 py-2.5 text-end">
+                $<%= number_with_delimiter(cryptocurrency.volume, delimiter: ",") %>
+              </td>
+              <!-- Circulating Supply -->
+              <td class="text-gray-900 px-1 py-2.5 text-end">
+                <%= number_with_delimiter(cryptocurrency.circulating_supply, delimiter: ",") %>
+              </td>
+              <!-- Total Supply -->
+              <td class="text-gray-900 px-1 py-2.5 text-end">
+                <%= number_with_delimiter(cryptocurrency.total_supply, delimiter: ",") %>M
+              </td>
+              <!-- Market Cap -->
+              <td class="text-gray-900 px-1 py-2.5 text-end">
+                $<%= number_with_delimiter(cryptocurrency.market_cap, delimiter: ",") %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- Separator -->
+<div>
+  <div class="w-full border-t border-gray-200"></div>
+</div>
         </div>
         <!-- Portfolio -->
         <div class="flex justify-end font-semibold text-sm leading-5 text-gray-700 ml-4 gap-x-1 items-center">
