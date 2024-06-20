@@ -16,6 +16,10 @@
   .gecko-up {
     @apply flex items-center text-primary-500;
   }
+
+  .gecko-down {
+    @apply flex items-center text-red-500;
+  }
 }
 
 .tw-container {
@@ -49,4 +53,60 @@
     max-width: 1300px;
     width: 100%;
   }
+}
+
+.popup-items {
+  position: relative;
+  width: 100%;
+}
+
+@media (min-width: 1200px) {
+  .popup-items {
+    position: absolute;
+    top: 1.25rem;
+    left: 0;
+    width: 16rem;
+  }
+}
+
+.popup-label {
+  flex: 1 1;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media (min-width: 1200px) {
+  .popup-label {
+    padding-top: 0;
+    padding-bottom: 0.5rem;
+    margin-bottom: -0.5rem;
+  }
+}
+
+.filter-dropdown-button {
+  width: 100%;
+}
+
+.filter-dropdown {
+  position: absolute;
+  width: 100%;
+  margin-top: 0.5rem;
+  width: 14rem;
+}
+
+@media (min-width: 1200px) {
+  .filter-dropdown {
+    position: absolute;
+    left: 0;
+  }
+}
+
+.filter-dropdown-item {
+  cursor: pointer;
+  align-items: center;
+  padding: 0.75rem 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
 }
