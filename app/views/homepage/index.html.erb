@@ -589,14 +589,247 @@
 <div>
   <div class="w-full border-t border-gray-200"></div>
 </div>
-        </div>
-        <!-- Portfolio -->
-        <div class="flex justify-end font-semibold text-sm leading-5 text-gray-700 ml-4 gap-x-1 items-center">
-          <i class="fa-fw fa-star text-yellow-500 fas"></i>
-          <div class="font-semibold text-sm leading-5 text-gray-700">Portfolio</div>
-        </div>
-        <!-- Fake input to trigger search popover -->
+<!-- Footer -->
+<div class="tw-container items-center my-6" data-controller="footer">
+  <div class="lg:grid lg:grid-cols-7 lg:gap-x-8">
+    <!-- Website Summary -->
+    <div class="col-span-3">
+      <a class="inline-block">
+        <img class="2lg:h-10 h-8 block" src="https://static.coingecko.com/s/coingecko-logo-8903d34ce19ca4be1c81f0db30e924154750d208683fad7ae6f2ce06c76d0a56.png"/>
+      </a>
+      <div class="text-gray-500 text-sm leading-5 mt-5">
+        CoinGecko provides a fundamental analysis of the crypto market, In addition to tracking price, volume and market capitalisation, CoinGecko tracks community growth, open-source code development, major events and on-chain metrics.
       </div>
     </div>
+    <!-- Resources & Donations -->
+    <div class="mt-8 lg:mt-0">
+      <!-- Resources -->
+      <div class="flex flex-col lg:space-y-4">
+        <div id="footer-resources" data-action="click->footer#toggleFooter" class="flex items-center cursor-pointer lg:cursor-auto py-4 lg:py-0 border-0 border-t border-b lg:border-t-0 lg:border-b-0 border-solid border-gray-200">
+          <div class="text-gray-700 font-semibold text-sm leading-5 flex-1">
+            Resources
+          </div>
+          <span class="lg:hidden">
+            <i class="fa-solid fa-plus fa-fw text-lg">
+            </i>
+          </span>
+        </div>
+        <div id="footer-resources-items" class="flex flex-col gap-y-4 mt-0 lg:mt-2 h-0 lg:h-auto pl-2 lg:pl-0 lg:pb-0 border-0 lg:border-b-0 border-solid overflow-y-hidden">
+          <div class="font-normal text-gray-500 text-sm leading-5 cursor-pointer">
+            Crypto News
+          </div>
+          <div class="font-normal text-gray-500 text-sm leading-5 cursor-pointer">
+            Bitcoin Treasury
+          </div>
+          <div class="font-normal text-gray-500 text-sm leading-5 cursor-pointer">
+            Crypto Heatmap
+          </div>
+          <div class="font-normal text-gray-500 text-sm leading-5 cursor-pointer">
+            Crypto API
+          </div>
+        </div>
+      </div>
+      <!-- Donations -->
+      <div class="flex flex-col lg:space-y-4 lg:mt-6">
+        <div id="footer-donations" data-action="click->footer#toggleFooter" class="flex items-center cursor-pointer lg:cursor-auto py-4 lg:py-0 border-0 border-b lg:border-b-0 border-solid border-gray-200">
+          <div class="text-gray-700 font-semibold text-sm leading-5 flex-1">
+            Donations
+          </div>
+          <span class="lg:hidden">
+            <i class="fa-solid fa-plus fa-fw text-lg">
+            </i>
+          </span>
+        </div>
+        <div id="footer-donations-items" class="flex flex-col gap-y-4 mt-0 lg:mt-2 h-0 lg:h-auto pl-2 lg:pl-0 lg:pb-0 border-0 lg:border-b-0 border-solid overflow-y-hidden">
+          <div class="font-normal text-gray-500 text-sm leading-5 cursor-pointer">
+            Bitcoin
+          </div>
+          <div class="font-normal text-gray-500 text-sm leading-5 cursor-pointer">
+            Ethereum
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Support -->
+    <div class="flex flex-col lg:space-y-4">
+      <div id="footer-support" data-action="click->footer#toggleFooter" class="flex items-center cursor-pointer lg:cursor-auto py-4 lg:py-0 border-0 border-b lg:border-b-0 border-solid border-gray-200">
+        <div class="text-gray-700 font-semibold text-sm leading-5 flex-1">
+          Support
+        </div>
+        <span class="lg:hidden">
+          <i class="fa-solid fa-plus fa-fw text-lg">
+          </i>
+        </span>
+      </div>
+      <div id="footer-support-items" class="flex flex-col gap-y-4 mt-0 lg:mt-2 h-0 lg:h-auto pl-2 lg:pl-0 lg:pb-0 border-0 lg:border-b-0 border-solid overflow-y-hidden">
+        <div class="font-normal text-gray-500 text-sm leading-5 cursor-pointer">
+          Request Form
+        </div>
+        <div class="font-normal text-gray-500 text-sm leading-5 cursor-pointer">
+          Advertising
+        </div>
+        <div class="font-normal text-gray-500 text-sm leading-5 cursor-pointer">
+          Candy Rewards Listing
+        </div>
+        <div class="font-normal text-gray-500 text-sm leading-5 cursor-pointer">
+          Help Center
+        </div>
+        <div class="font-normal text-gray-500 text-sm leading-5 cursor-pointer">
+          Bug Bounty
+        </div>
+        <div class="font-normal text-gray-500 text-sm leading-5 cursor-pointer">
+          FAQ
+        </div>
+      </div>
+    </div>
+    <!-- About CoinGecko -->
+    <div class="flex flex-col lg:space-y-4">
+      <div id="footer-about" data-action="click->footer#toggleFooter" class="flex items-center cursor-pointer lg:cursor-auto py-4 lg:py-0 border-0 border-b lg:border-b-0 border-solid border-gray-200">
+        <div class="text-gray-700 font-semibold text-sm leading-5 flex-1">
+          About CoinGecko
+        </div>
+        <span class="lg:hidden">
+          <i class="fa-solid fa-plus fa-fw text-lg">
+          </i>
+        </span>
+      </div>
+      <div id="footer-about-items" class="flex flex-col gap-y-4 mt-0 lg:mt-2 h-0 lg:h-auto pl-2 lg:pl-0 lg:pb-0 border-0 lg:border-b-0 border-solid overflow-y-hidden">
+        <div class="font-normal text-gray-500 text-sm leading-5 cursor-pointer">
+          About Us
+        </div>
+        <div class="flex gap-x-1">
+          <div class="font-normal text-gray-500 text-sm leading-5 cursor-pointer">
+            Careers
+          </div>
+          <span class="inline-flex items-center rounded-md bg-primary-100 px-1.5 py-0.5">
+            <div class="text-xs leading-4 text-primary-700 font-medium">
+              Join Us
+            </div>
+          </span>
+        </div>
+        <div class="font-normal text-gray-500 text-sm leading-5 cursor-pointer">
+          Company Blog
+        </div>
+        <div class="font-normal text-gray-500 text-sm leading-5 cursor-pointer">
+          Branding Guide
+        </div>
+        <div class="font-normal text-gray-500 text-sm leading-5 cursor-pointer">
+          Methodology
+        </div>
+        <div class="font-normal text-gray-500 text-sm leading-5 cursor-pointer">
+          Disclaimer
+        </div>
+        <div class="font-normal text-gray-500 text-sm leading-5 cursor-pointer">
+          Terms of Service
+        </div>
+        <div class="font-normal text-gray-500 text-sm leading-5 cursor-pointer">
+          Privacy Policy
+        </div>
+        <div class="font-normal text-gray-500 text-sm leading-5 cursor-pointer">
+          Ad Policy
+        </div>
+        <div class="font-normal text-gray-500 text-sm leading-5 cursor-pointer">
+          Cookie Preferences
+        </div>
+      </div>
+    </div>
+    <!-- Community -->
+    <div class="flex flex-col lg:space-y-4">
+      <div id="footer-community" data-action="click->footer#toggleFooter" class="flex items-center cursor-pointer lg:cursor-auto py-4 lg:py-0 border-0 border-b lg:border-b-0 border-solid border-gray-200">
+        <div class="text-gray-700 font-semibold text-sm leading-5 flex-1">
+          Community
+        </div>
+        <span class="lg:hidden">
+          <i class="fa-solid fa-plus fa-fw text-lg">
+          </i>
+        </span>
+      </div>
+      <div id="footer-community-items" class="flex flex-col gap-y-4 mt-0 lg:mt-2 h-0 lg:h-auto pl-2 lg:pl-0 lg:pb-0 border-0 lg:border-b-0 border-solid overflow-y-hidden">
+        <div class="font-normal text-gray-500 text-sm leading-5 cursor-pointer">
+          X/Twitter
+        </div>
+        <div class="font-normal text-gray-500 text-sm leading-5 cursor-pointer">
+          Telegram Chat
+        </div>
+        <div class="font-normal text-gray-500 text-sm leading-5 cursor-pointer">
+          Telegram News
+        </div>
+        <div class="font-normal text-gray-500 text-sm leading-5 cursor-pointer">
+          Instagram
+        </div>
+        <div class="font-normal text-gray-500 text-sm leading-5 cursor-pointer">
+          Reddit
+        </div>
+        <div class="font-normal text-gray-500 text-sm leading-5 cursor-pointer">
+          Discord
+        </div>
+        <div class="font-normal text-gray-500 text-sm leading-5 cursor-pointer">
+          Facebook
+        </div>
+        <div class="font-normal text-gray-500 text-sm leading-5 cursor-pointer">
+          Youtube
+        </div>
+        <div class="font-normal text-gray-500 text-sm leading-5 cursor-pointer">
+          Tiktok
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Separator -->
+<div>
+  <div class="w-full border-t border-gray-200"></div>
+</div>
+<!-- Crypto News -->
+<div class="tw-container items-center my-6 block">
+  <div class="block lg:flex">
+    <!-- Crypto News Message -->
+    <div class="flex-1">
+      <div class="text-gray-700 font-semibold text-sm leading-5 mb-2">
+        Interested to stay up-to-date with cryptocurrencies?
+      </div>
+      <div class="text-gray-500 font-normal text-sm leading-5 mb-2 lg:mb-0">
+        Get the latest crypto news, updates, and reports by subscribing to our free newsletter.
+      </div>
+    </div>
+    <!-- Subscribe Button -->
+    <div>
+      <div class="block lg:flex mb-1">
+        <div class="focus-within:ring-primary-500 ring-2 ring-gray-100 rounded-lg px-0.5 mb-2 lg:mb-0 lg:mr-2">
+          <input class="w-full placeholder-gray-400 text-sm px-2 h-10 p-0 border-0 outline-0 bg-transparent" placeholder="Enter your email address">
+        </div>
+        <button class="w-full lg:w-auto text-xs leading-4 mb-1 font-semibold bg-primary-500 text-white shadow-[0_4px_0_0] shadow-primary-700 border-primary-500 border-x-2 border-t-2 rounded-lg px-2.5 py-1.5 active:translate-y-2 active:shadow-[0_2px_0_0] active:shadow-primary-500 hover:bg-primary-600 hover:border-primary-600 duration-150 outline-none">
+          Subscribe
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Separator -->
+<div>
+  <div class="w-full border-t border-gray-200"></div>
+</div>
+<!-- Copyrights -->
+<div class="tw-container block lg:flex items-center text-center lg:text-left my-6">
+  <div class="block lg:flex-1 text-gray-500 font-normal text-sm mb-4 lg:mb-0">
+    © 2024 CoinGecko. All Rights Reserved.
+  </div>
+  <div class="inline-block lg:flex">
+    <div class="flex">
+      <a href="https://coingecko.app.link/footer-android" width="135">
+        <img loading="lazy" class="mr-2" width="135" height="40" src="https://static.coingecko.com/s/coingecko_logos/google_play_store-cb1f298b04afa7f74639a948d9b2e22e4aa6eea9486a2b0442c2cf9bdcda63e8.svg">
+      </a>
+      <a href="https://coingecko.app.link/footer-ios" width="135">
+        <img loading="lazy" class="mr-2" width="135" height="40" src="https://static.coingecko.com/s/coingecko_logos/apple_app_store-558245a688cc13737dfb861fd82b252d75d5afbaf343c06e3067a454675bbe05.svg">
+      </a>
+    </div>
+  </div>
+</div>
+<!-- Disclaimer -->
+<div class="tw-container items-center my-6 leading-5">
+  <div class="inline cursor-pointer font-semibold text-sm underline text-slate-700 hover:text-primary-500">
+    IMPORTANT DISCLAIMER:</div>
+  <div class="inline text-gray-500 text-sm font-normal">
+    All content provided herein our website, hyperlinked sites, associated applications, forums, blogs, social media accounts and other platforms (“Site”) is for your general information only, procured from third party sources. We make no warranties of any kind in relation to our content, including but not limited to accuracy and updatedness. No part of the content that we provide constitutes financial advice, legal advice or any other form of advice meant for your specific reliance for any purpose. Any use or reliance on our content is solely at your own risk and discretion. You should conduct your own research, review, analyse and verify our content before relying on them. Trading is a highly risky activity that can lead to major losses, please therefore consult your financial advisor before making any decision. No content on our Site is meant to be a solicitation or offer.
   </div>
 </div>
