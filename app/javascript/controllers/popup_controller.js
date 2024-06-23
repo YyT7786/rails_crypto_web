@@ -1,6 +1,11 @@
 import { Controller } from "@hotwired/stimulus"
 
 export default class extends Controller {
+  static targets = [
+    "signInTab",
+    "signUpTab"
+  ];
+
   handleOver(e) {
     if (this.isMobile()) return;
 
@@ -44,6 +49,16 @@ export default class extends Controller {
     backdrop.classList.toggle("hidden");
     menu.classList.toggle("fa-bars");
     menu.classList.toggle("fa-xmark");
+  }
+
+  toggleSignInModal(e) {
+    this.signInTabTarget.click();
+    Modal.show("login_modal");
+  }
+
+  toggleSignUpModal(e) {
+    this.signUpTabTarget.click();
+    Modal.show("login_modal");
   }
 
   isMobile(){
