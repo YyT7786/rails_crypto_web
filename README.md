@@ -1,3 +1,8 @@
+# CoinGecko Clone
+![image](https://github.com/YyT7786/rails_crypto_web/assets/97003125/6a518ef9-2f58-4c09-b996-8455de6e108a)
+
+A CoinGecko Website Clone made using [Ruby On Rails](https://rubyonrails.org/)
+
 # README
 
 This README would normally document whatever steps are necessary to get the
