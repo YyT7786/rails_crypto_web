@@ -3,27 +3,35 @@
 
 A CoinGecko Website Clone made using [Ruby On Rails](https://rubyonrails.org/)
 
-# README
+## Build-With
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Ruby -v 3.1.2
+- Rails -v 7.1.3.2
+- PostgreSQL
+- VScode
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+### Prerequisites
 
-* System dependencies
+To get this project up and running locally, you must already have ruby and necessary gems installed on your computer
 
-* Configuration
+**To get this project set up on your local machine, follow these simple steps:**
 
-* Database creation
+1. Open Terminal.
+2. Navigate to your desired location to download the contents of this repository.
+3. Copy and paste the following code into the Terminal: 
+4. Run ``````.
+5. Run ```bundle install``` to get the necesary gems.
+6. Run ```yarn install --check-files``` .
+7. Run `rails db:drop`.
+7. Run `rails db:create`.
+7. Run `rails db:migrate`.
 
-* Database initialization
+**To check the Rspec Testcases on your local machine, follow these simple steps:**
+1. Run ```bundle exec rspec ```
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+## Acknowledgment::
 
-* Deployment instructions
-
-* ...
+Design idea by Gregoire Vella on Behance
