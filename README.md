@@ -20,18 +20,15 @@ To get this project up and running locally, you must already have ruby and neces
 
 1. Open Terminal.
 2. Navigate to your desired location to download the contents of this repository.
-3. Copy and paste the following code into the Terminal: 
-4. Run ``````.
+3. Copy and paste the following code into the Terminal: git clone https://github.com/YyT7786/rails_crypto_web.git
+4. Run ```cd rails_crypto_web```.
 5. Run ```bundle install``` to get the necesary gems.
 6. Run ```yarn install --check-files``` .
 7. Run `rails db:drop`.
 7. Run `rails db:create`.
 7. Run `rails db:migrate`.
-
-**To check the Rspec Testcases on your local machine, follow these simple steps:**
-1. Run ```bundle exec rspec ```
-
+8. Run `rails s`.
 
 ## Acknowledgment::
 
-Design idea by Gregoire Vella on Behance
+Copyright from https://www.coingecko.com/en/all-cryptocurrencies
