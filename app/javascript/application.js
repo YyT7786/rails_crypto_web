@@ -3,6 +3,7 @@ import "@hotwired/turbo-rails"
 import "controllers"
 import 'alpine-turbo-drive-adapter'
 import Alpine from 'alpinejs'
+import { initializeAlpine } from "./packs/alpine"
 
-window.Alpine = Alpine
-Alpine.start()
+initializeAlpine();
+Alpine.store('modals').init();
